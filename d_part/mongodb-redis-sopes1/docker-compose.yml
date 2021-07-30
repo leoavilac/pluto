@@ -1,0 +1,27 @@
+version: "3"
+services:
+    node-app:
+        build: .
+        ports:
+            - "3001:3001"
+        env_file:
+            - ./.env
+        depends_on: 
+            - mongodb
+
+    mongodb:
+        image: mongo
+        environment: 
+            - MONGO_INITDB_ROOT_USERNAME=leoavilac
+            - MONGO_INITDB_ROOT_PASSWORD=holamundo
+        volumes:
+            - mongo-db:/data/db
+
+    redisdb:
+        image: redis
+        volumes:
+            - redis-db:/data
+
+volumes:
+    mongo-db:
+    redis-db:
