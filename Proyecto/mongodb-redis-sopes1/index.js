@@ -32,8 +32,11 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+app.enable("trust proxy");
+
 app.get('/', (req, res) => {
     res.send('<h1>Hello World! I am Leonel Avila C :D</h1>');
+    console.log("Hello World!");
 });
 
 app.use(express.json());

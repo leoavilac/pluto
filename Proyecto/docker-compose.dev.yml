@@ -12,6 +12,10 @@ services:
             - CHOKIDAR_USEPOLLING=true
             - REACT_APP_NAME=leoavilac
 
+    nginx:
+        ports:
+            - "3001:81"
+
     node-app:
         build:
             context: ./mongodb-redis-sopes1

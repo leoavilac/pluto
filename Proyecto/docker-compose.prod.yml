@@ -9,6 +9,10 @@ services:
         ports:
             - "8080:80"
 
+    nginx:
+        ports:
+            - "81:81"
+
     node-app:
         build:
             context: ./mongodb-redis-sopes1
