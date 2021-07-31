@@ -1,0 +1,15 @@
+version: "3"
+services:
+    react-app:
+        build:
+            context: ./react-app
+            dockerfile: Dockerfile.dev
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./react-app/src:/app/src
+        environment: 
+            - CHOKIDAR_USEPOLLING=true
+            - REACT_APP_NAME=leoavilac
+        # env_file: 
+        #     - ./react-app/.env

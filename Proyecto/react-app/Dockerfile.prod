@@ -1,0 +1,25 @@
+# Base image
+FROM node as react-build
+
+# Base directory
+WORKDIR /app
+
+# Copy package.json in currect directory
+COPY package.json .
+
+# Install all dependencies
+RUN npm install
+
+# Copy all files
+COPY . .
+
+# Enviroment variables
+ARG REACT_APP_NAME
+ENV REACT_APP_NAME=$REACT_APP_NAME
+
+# Run project
+RUN npm run build
+
+# DEPLOYING IN NGINX
+FROM nginx
+COPY --from=react-build /app/build /usr/share/nginx/html

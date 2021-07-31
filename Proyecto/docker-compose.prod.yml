@@ -1,0 +1,21 @@
+version: "3"
+services:
+    react-app:
+        build:
+            context: ./react-app
+            dockerfile: Dockerfile.prod
+            args:
+                - REACT_APP_NAME=leoavilac-prod
+        ports:
+            - "8080:80"
+
+    node-app:
+        build:
+            context: ./mongodb-redis-sopes1
+            args:
+                NODE_ENV: production
+        environment:
+            - NODE_ENV=production
+        command: node index.js
+
+    
