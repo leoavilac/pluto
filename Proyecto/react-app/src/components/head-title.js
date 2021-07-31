@@ -2,11 +2,13 @@ import PropTypes from 'prop-types'
 
 const HeadTitle = ({ title, subtitle }) => {
     return (
-        <header>
-            <h1><strong>{ title }</strong></h1>
-            <h4 className="text-muted">{ subtitle }</h4>
-            <hr />
-        </header>
+        <div style={{border: 1, backgroundColor:"lightgray", textAlign:"center"}}>
+            <header>
+                <h1><strong>{ title }</strong></h1>
+                <h4 className="text-muted">{ subtitle }</h4>
+
+            </header>
+        </div>
     )
 }
 

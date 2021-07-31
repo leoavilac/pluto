@@ -4,6 +4,8 @@ services:
         build:
             context: ./react-app
             dockerfile: Dockerfile.dev
+        links:
+            - "node-app:na"
             
     node-app:
         build: ./mongodb-redis-sopes1

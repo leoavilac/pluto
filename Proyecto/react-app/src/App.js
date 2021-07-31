@@ -1,32 +1,40 @@
 // Libraries
-import { BrowserRouter, Route } from "react-router-dom";
 
 // Components
 import HeadTitle from './components/head-title';
-import ReportsList from './components/reports-list';
-import SavedData from './components/saved-data';
-import Top10Countries from './components/top10-countries';
-import TotalByGender from './components/total-by-gender';
-import TotalByAge from './components/total-by-age';
+import Component_AllData from "./components/Component_AllData";
+import Component_TopTen from './components/Component_TopTen';
+import Component_ByGender from './components/Component_ByGender';
 
 
 function App() {
     // Variable declaration
 
     return (
-        <BrowserRouter>
-            <Route path='/' exact render={( props ) => (
-                <div className="container">
-                    <HeadTitle />
-                    <ReportsList />
-                </div>
-            )} />
+        <div className="container">
+            <br/>
+            <HeadTitle />
 
-            <Route path='/datos_almacenados' component={ SavedData }/>
-            <Route path='/top10_paises' component={ Top10Countries }/>
-            <Route path='/total_por_genero' component={ TotalByGender }/>
-            <Route path='/total_por_edad' component={ TotalByAge }/>
-        </BrowserRouter>
+            <hr /><br />
+
+            <h3><b>Reporte #1</b></h3>
+            <p>Datos almacenados en la base de datos, en MongoDB</p>
+            <Component_AllData />
+
+            <br /><hr /><br />
+            
+            <h3><b>Reporte #2</b></h3>
+            <p>Top 10 de países más vacunados</p>
+            <Component_TopTen />
+
+            <br /><hr /><br />
+            
+            <h3><b>Reporte #3</b></h3>
+            <p>Generos vacunados por país</p>
+            <Component_ByGender />
+
+            <br /><hr /><br />
+        </div>
     );
 }
 

@@ -16,7 +16,7 @@ router
     .get(redisController.redis_getCountries);
 
 router
-    .route('/mongo/:location')
+    .route('/mongo/')
     .get(postController.countByGender);
 
 // http://localhost:3001/api/:id
