@@ -1,6 +1,0 @@
-version: "3"
-services:
-    react-app:
-        build:
-            context: ./react-app
-            dockerfile: Dockerfile.dev

@@ -21,7 +21,8 @@ const postSchema = new mongoose.Schema({
         type : String,
         required : [ true, "obligatorio" ]
     },
-});
+}, 
+{ collection : "personas" });
 
 const Post = mongoose.model("Post", postSchema);
 module.exports = Post;

@@ -1,0 +1,39 @@
+version: "3.3"
+services:
+
+  # gRPC Client
+  grpc-client:
+      build: ./grpc-server/Client
+      ports:
+        - "80:3000"
+
+  # gRPC Server
+  grpc-server:
+      build: ./grpc-server/Server
+
+  # DB Server
+  db-server:
+      build: ./db-server
+      environment:
+        - MONGO_USER=leoavilac
+        - MONGO_PASSWORD=holamundo
+
+  # MongoDB Service
+  mongodb:
+    image: mongo
+    environment: 
+        - MONGO_INITDB_ROOT_USERNAME=leoavilac
+        - MONGO_INITDB_ROOT_PASSWORD=holamundo
+    volumes:
+        - mongo-db:/data/db
+
+  # RedisDB Service
+  redisdb:
+      image: redis
+      volumes:
+          - redis-db:/data
+
+# Persistent memory for DBs
+volumes:
+  mongo-db:
+  redis-db:
