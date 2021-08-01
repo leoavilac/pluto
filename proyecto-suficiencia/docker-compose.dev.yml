@@ -21,6 +21,8 @@ services:
             context: ./mongodb-redis-sopes1
             args:
                 NODE_ENV: development
+        ports:
+            - "3001:3001"
         volumes:
             - ./mongodb-redis-sopes1/:/app
             - /app/node_modules
