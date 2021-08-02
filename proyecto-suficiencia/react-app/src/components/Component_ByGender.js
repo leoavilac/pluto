@@ -7,7 +7,7 @@ export default class Component_ByGender extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/api/mongo/')
+        fetch('http://34.125.192.186:3001/api/mongo/')
         .then(res => res.json())
         .then((data) => {
             this.setState({ male : data.data.male });

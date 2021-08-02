@@ -5,9 +5,9 @@ export default class Component_AllData extends React.Component {
     state = {
         persons : []
     }
-
+    
     componentDidMount() {
-        fetch('http://localhost:3001/api/')
+        fetch('http://34.125.192.186:3001/api/')
         .then(res => res.json())
         .then((data) => {
             this.setState({ persons : data.data.persons })

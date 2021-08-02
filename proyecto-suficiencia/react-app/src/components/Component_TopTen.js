@@ -6,7 +6,7 @@ export default class Component_TopTen extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/api/redis/')
+        fetch('http://34.125.192.186:3001/api/redis/')
         .then(res => res.json())
         .then((data) => {
             this.setState({ countries : data.data.countries })

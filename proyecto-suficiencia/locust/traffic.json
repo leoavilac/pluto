@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Juan Perez",
+        "location": "Guatemala",
+        "gender": "male",
+        "age": 28,
+        "vaccine_type": "Sputnik V"
+    }, 
+    {
+        "name": "Pablo Roche",
+        "location": "Guatemala",
+        "gender": "male",
+        "age": 28,
+        "vaccine_type": "Sputnik V"
+    },
+    {
+        "name": "Enrique Elias",
+        "location": "Guatemala",
+        "gender": "male",
+        "age": 28,
+        "vaccine_type": "Sputnik V"
+    },
+    {
+        "name": "Maria Juana Ramirez",
+        "location": "Guatemala",
+        "gender": "female",
+        "age": 26,
+        "vaccine_type": "Sputnik V"
+    }, 
+    {
+        "name": "Sandra Argueta",
+        "location": "Petén",
+        "gender": "female",
+        "age": 35,
+        "vaccine_type": "Sputnik V"
+    },
+    {
+        "name": "Pedro Martinez",
+        "location": "Quetzaltenango",
+        "gender": "male",
+        "age": 45,
+        "vaccine_type": "Sputnik V"
+    },
+    {
+        "name": "Susan Ramirez",
+        "location": "Quetzaltenango",
+        "gender": "female",
+        "age": 58,
+        "vaccine_type": "Sputnik V"
+    },
+    {
+        "name": "Susana Morazán",
+        "location": "Petén",
+        "gender": "female",
+        "age": 18,
+        "vaccine_type": "Sputnik V"
+    }
+]
